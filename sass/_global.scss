@@ -1,0 +1,68 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: $darkSlateGray;
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+h1 {
+    color: $darkSlateGray;
+    padding-bottom: rem(10);
+    padding-top: 3.2rem;
+    font-size: rem(56);
+
+    @include breakpointDown(large) {
+        color: $darkSlateGray;
+        font-size: 2.5rem;
+        margin-top: 32px;
+        transform: translateY(-60px);
+    }
+}
+
+
+.btn {
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    font-size: rem(16);
+    font-weight: 700;
+    padding: 1rem 0;
+    text-align: center;
+    color: $white;
+    background: $darkSlateGray;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.5s ease-in-out;
+
+    &:hover {
+        background: rgb(255, 84, 120);
+        background: -moz-linear-gradient(90deg, rgba(255, 84, 120, 1) 0%, rgba(255, 103, 64, 1) 90%);
+        background: -webkit-linear-gradient(90deg, rgba(255, 84, 120, 1) 0%, rgba(255, 103, 64, 1) 90%);
+        background: linear-gradient(90deg, rgba(255, 84, 120, 1) 0%, rgba(255, 103, 64, 1) 90%);
+    }
+
+    @include breakpointDown(large) {
+        width: 101%;
+    }
+}
+
+.py-1 {
+    padding: 0 24px;
+}
+
+p.trans {
+    @include breakpointDown(large) {
+        transform: translateY(-57px);
+    }
+}

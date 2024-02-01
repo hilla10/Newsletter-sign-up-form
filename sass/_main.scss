@@ -1,0 +1,225 @@
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+
+    &__container {
+        background: $white;
+        color: $darkSlateGray;
+        max-width: rem(930);
+        width: 100%;
+        height: auto;
+        margin: auto;
+        padding: 1.5rem .9rem .75rem 2.5rem;
+        border-radius: 2.3rem;
+
+        @include breakpointDown(xlarge) {
+            padding: 0;
+        }
+
+    }
+
+    &__container--success {
+        background: $white;
+        color: $darkSlateGray;
+        max-width: 506px;
+        width: 100%;
+        height: auto;
+        margin: auto;
+        padding: rem(74) rem(65);
+        border-radius: 2.3rem;
+
+        @include breakpointDown(large) {
+            width: 100%;
+            height: 100%;
+            border-radius: none !important;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: rem(74) rem(24);
+        }
+
+        h1 {
+            transform: translateY(rem(-45));
+            line-height: 1;
+
+            @include breakpointDown(large) {
+                transform: translateY(rem(-105));
+            }
+        }
+
+        img {
+            transform: translateY(-26px);
+            width: rem(64);
+            height: rem(64);
+
+            @include breakpointDown(large) {
+                transform: translateY(rem(-62));
+            }
+        }
+
+        p {
+            transform: translateY(rem(-30));
+
+            @include breakpointDown(large) {
+                transform: translateY(rem(-93));
+                padding-right: rem(30);
+            }
+        }
+
+        .btn {
+            transform: translateY(10px);
+
+            @include breakpointDown(large) {
+                transform: translateY(rem(171));
+                width: 85.7%;
+            }
+        }
+    }
+
+    &__grid--item {
+        height: 100%;
+        width: 100%;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        align-items: center;
+        gap: rem(30);
+
+        @include breakpointDown(xlarge) {
+            grid-template-columns: 1fr;
+            gap: 0;
+        }
+    }
+
+    &__bg_img {
+        background: url('../assets/images/illustration-sign-up-desktop.svg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 97.5%;
+        height: rem(592);
+        border-radius: rem(16);
+
+        @include breakpointDown(large) {
+            order: 1;
+            background: url('../assets/images/illustration-sign-up-mobile.svg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+        }
+
+        @include breakpointDown(large) {
+            height: 100%;
+        }
+    }
+
+    @include breakpointDown(large) {
+        &__bg--container {
+            height: 284px;
+        }
+    }
+
+    &__flex {
+        display: flex;
+        align-items: center;
+        padding-top: 24px;
+
+        img {
+            margin-right: 1.05rem;
+        }
+
+        @include breakpointDown(large) {
+            transform: translateY(-57px);
+
+            .align-img {
+                transform: translateY(-13px);
+            }
+        }
+    }
+
+    @include breakpointDown(xlarge) {
+        &__reverse {
+            order: 2;
+        }
+    }
+
+    &__form {
+        position: relative;
+        width: 100%;
+        margin-top: 38px;
+
+        @include breakpointDown(large) {
+            transform: translateY(-54px);
+        }
+
+        label {
+            display: block;
+            margin-bottom: rem(11);
+            font-size: rem(12);
+            font-weight: 700;
+        }
+
+        input {
+            display: block;
+            width: 100%;
+            padding: 1.1rem 1.5rem;
+            margin-bottom: rem(24);
+            border: 1px solid currentColor;
+            color: $gray;
+            outline: none;
+            border-radius: 8px;
+            font-size: 16px;
+
+            @include breakpointDown(large) {
+                width: 101%;
+                margin-bottom: 21px;
+            }
+        }
+
+        .msg {
+            display: none;
+            color: $tomato;
+            font-size: rem(12);
+            position: absolute;
+            top: -2px;
+            right: 12px;
+            font-weight: 700;
+            border: none !important;
+            background: none !important;
+        }
+
+        .error {
+            border: 1px solid $tomato;
+            color: $tomato;
+            background: #ff39361a;
+        }
+    }
+
+
+}
+
+
+.footer {
+    background: $tomato;
+    color: #fff;
+    padding: rem(30);
+    text-align: center;
+    margin-top: rem(30);
+
+    a {
+        color: #ccc;
+        text-decoration: none;
+        transition: color 0.5s ease;
+
+        &:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+    }
+}
